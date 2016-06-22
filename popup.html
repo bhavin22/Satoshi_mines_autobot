@@ -1,0 +1,89 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <link href="popup.css" rel="stylesheet" type="text/css" />
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+      }
+      #status {
+        /* avoid an excessively wide status text */
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 400px;
+      }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+  </head>
+  <body>
+    <div id = "controlPanel">
+      <input id="toggleButton" type = "button" value="Start" />
+      <input id="previousUrl" type = "button" value="URLs" />
+      <input id="gameHistoryButton" type = "button" value="History" />
+    </div>
+    <div id="settingPanel">
+      <div class="presets">
+        <ul class="bets">
+          <li class="cell"><button class="button_zero">0</button></li>
+          <li class="cell"><button class="betButton">MIN</button></li>
+          <li class="cell"><button class="betButton">MAX</button></li>
+          <li class="cell"><button class="betButton button_plus">+100</button></li>
+          <li class="cell"><button class="betButton button_plus">+1000</button></li>
+          <li class="cell"><button class="betButton button_plus">+10000</button></li>
+          <li class="cell"><button class="betButton button_minus">-100</button></li>
+          <li class="cell"><button class="betButton button_minus">-1000</button></li>
+          <li class="cell"><button class="betButton button_minus">-10000</button></li>
+        </ul>
+      </div>
+      <div class="starter">
+        <div class="top_row">
+          <div class="c33 cell">
+            <input class="bet" id="bet" type="number" pattern="[0-9]*" placeholder="Bet">
+          </div>
+          <div class="c33 cell">
+            <input class="bet" id="session" type="number" pattern="[0-9]*" placeholder="Sessions" value="3">
+          </div>
+          <div class="c33 cell">
+            <input class="bet" id="reduceBits" type="number" pattern="[0-9]*" placeholder="ReduceBits" value="">
+          </div>
+        </div>
+        <div class="bottom_row mine_options">
+          <div class="quarter cell">
+            <button class="buttonBombs active" id="buttonBomb1"><span><i class="icon-alert"></i></span>1</button>
+          </div>
+          <div class="quarter cell">
+            <button class="buttonBombs" id="buttonBomb3" class="active"><span><i class="icon-alert"></i></span>3</button>
+          </div>
+          <div class="quarter cell">
+            <button class="buttonBombs" id="buttonBomb5"><span><i class="icon-alert"></i></span>5</button>
+          </div>
+          <div class="quarter cell">
+            <button class="buttonBombs" id="buttonBomb24"><span><i class="icon-alert"></i></span>24</button>
+          </div>
+        </div>
+      </div>
+      <button id="apply" class="apply">Apply settings</button>
+    </div>
+    <div id="historyPanel" style = "display:none">
+      <div id="previousUrls" style="display:none"></div>
+      <div id="gameHistory" style="display:none"></div>
+      <input type="button" value="Close" id="closeHistory" />
+    </div>
+    <script type="text/javaScript" src="popup.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,257 @@
+@font-face {
+    font-family: satoshimines;
+    src: url(satoshimines.eot?21405699);
+    src: url(satoshimines.eot?21405699#iefix) format('embedded-opentype'),url(satoshimines.woff?21405699) format('woff'),url(satoshimines.ttf?21405699) format('truetype'),url(satoshimines.svg?21405699#satoshimines) format('svg');
+    font-weight: 400;
+    font-style: normal
+}
+body{
+	position: relative;
+    width: 430px;
+    height: 300px;
+    background-color: #111;;
+}
+table{
+    width: 100%;
+    text-align: center;
+}
+thead{
+    color:#90c739;
+}
+#controlPanel{
+	float: left;
+	width:100px;
+}
+#settingPanel{
+	height: 300px;
+	width:300px;
+	float: left;
+    border: 3px solid #280;;
+    padding: 10px;
+    border-radius: 10px;
+    background: #1c1c1c;
+}
+#historyPanel{
+    height: 300px;
+    width:430px;
+}
+#previousUrls,#gameHistory{
+    height: 270px;
+    width:100%;
+    border:3px solid #002d44;
+    padding:4px;
+    color:white;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow-y:scroll;
+}
+#apply{
+	width: 100%;
+}
+#toggleButton{
+	width: 90%;
+}
+#previousUrl,#gameHistoryButton{
+    width: 90%;
+}
+#closeHistory{
+    width: 100%;
+}
+#toggleButton,#apply,#previousUrl,#closeHistory,#gameHistoryButton
+ {
+    float: left;
+    font-size: 1.3em;
+    background: #90c739;
+    border: 1px solid #52b000;
+    color: #fff;
+    text-shadow: 0 -1px 0 #52b000;
+    position: relative;
+    top: 3px;
+    -moz-box-shadow: 0 2px 0 #225a00,0 3px 1px #000,inset 0 1px 0 rgba(255,255,255,.2);
+    -webkit-box-shadow: 0 2px 0 #225a00,0 3px 1px #000,inset 0 1px 0 rgba(255,255,255,.2);
+    -o-box-shadow: 0 2px 0 #225a00,0 3px 1px #000,inset 0 1px 0 rgba(255,255,255,.2);
+    box-shadow: 0 2px 0 #225a00,0 3px 1px #000,inset 0 1px 0 rgba(255,255,255,.2);
+    height: 40px;
+}
+#toggleButton.active, #toggleButton:active, #apply:active, #apply.active, #previousUrl:active,#previousUrl.active,#closeHistory.active,#closeHistory:active,#gameHistoryButton.active,#gameHistoryButton:active {
+    top: 0;
+    box-shadow: 0 1px 1px #000,inset 0 2px 4px #060;
+    border: 1px solid #070;
+    color: rgba(255,255,255,.5);
+}
+.presets {
+    width: 300px;
+    float: left;
+    height: 7em;
+}
+ul.bets {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.bets li {
+    width: 100px;
+    height: 2.3333em;
+}
+.bets button {
+    width: 100%;
+    height: 100%;
+    background: #ddd;
+    border: 1px solid #888;
+    border-bottom-color: #777;
+    border-top-color: #f9f9f9;
+    font-size: .8em;
+    text-shadow: 0 1px 0 #fff;
+    letter-spacing: -.1em;
+    box-shadow: 0 2px 0 #444,0 3px 1px #000,0 3px 1px #000;
+    position: relative;
+    top: -2px;
+    color: #111;
+}
+.bets button.button_zero {
+    text-shadow: 0 -1px 0 #800;
+    background: #e11;
+    color: #fff;
+    border: 1px solid #900;
+    border-bottom-color: #700;
+    border-top-color: #f44;
+    box-shadow: 0 2px 0 #700,0 3px 1px #000,0 3px 1px #000;
+}
+.bets button.button_plus {
+    box-shadow: 0 2px 0 #ad5f1b,0 3px 1px #000;
+    background: #fffceb;
+    border-color: #fff #ffe699 #e6a82e;
+    color: #b70;
+}
+.bets button.button_minus {
+    box-shadow: 0 2px 0 #136,0 3px 1px #000;
+    background: #def;
+    border-color: #fff #9cf #38c;
+    color: #018;
+}
+.bets button.button_plus:active {
+    box-shadow: 0 1px 0 #7d5300,inset 0 1px 1px #ad5f1b;
+    background: #fffbcb;
+    border-color: #ad5f1b #ad5f1b #fffceb;
+}
+.bets button.button_minus:active {
+    box-shadow: 0 1px 0 #126,inset 0 1px 1px #38c;
+    background: #cef;
+    border-top-color: #38c;
+    border-bottom-color: #def;
+}
+.starter {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    width: 300px;
+    float: left;
+}
+.bottom_row, .top_row {
+    height: 4em;
+    display: block;
+    overflow: auto;
+}
+.top_row button, .top_row input {
+    width: 100%;
+    height: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.bet {
+    float: left;
+    background: #0a0a0a;
+    border: 1px solid #333;
+    border-top-color: #000;
+    border-bottom-color: #555;
+    padding: 0;
+    color: #ccc;
+    text-align: center;
+    margin: 0 .3em 0 0;
+    width: 5em;
+    -moz-box-shadow: inset 0 2px 3px #000,0 1px 0 #1c1c1c;
+    -webkit-box-shadow: inset 0 2px 3px #000,0 1px 0 #1c1c1c;
+    -o-box-shadow: inset 0 2px 3px #000,0 1px 0 #1c1c1c;
+    box-shadow: inset 0 2px 3px #000,0 1px 0 #1c1c1c;
+    font-size: 2em;
+}
+.bottom_row {
+    height: 3em;
+}
+.bottom_row, .top_row {
+    height: 4em;
+    display: block;
+    overflow: auto;
+}
+.quarter {
+    width: 25%;
+}
+.bottom_row button {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: #444;
+    padding: 0;
+    color: #fff;
+    border: 1px solid #666;
+    border-top-color: #777;
+    border-right-color: #111;
+    border-bottom: 2px solid #1a1a1a;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-box-shadow: 0 .1em .1em #000;
+    -webkit-box-shadow: 0 .1em .1em #000;
+    -o-box-shadow: 0 .1em .1em #000;
+    box-shadow: 0 .1em .1em #000;
+}
+.mine_options button span {
+    color: #e22;
+}
+.icon-alert:before {
+    content: '\e807';
+}
+[class*=" icon-"]:before, [class^=icon-]:before {
+    font-family: satoshimines;
+    font-style: normal;
+    font-weight: 400;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+}
+.mine_options button.active, .mine_options button:active {
+    background: #333;
+    border: 1px solid #111;
+    border-top-color: #000;
+    box-shadow: inset 0 .2em .2em #111;
+    font-weight: 600;
+}
+.bets li {
+    float: left;
+    margin: 0;
+}
+.cell {
+    padding: .1em;
+}
+.cell {
+    height: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+}
+.c50{
+	width: 50%;
+}
+.c33{
+    width: 33%;
+}
